@@ -1,0 +1,59 @@
+
+body{
+    margin: 56mm;
+    padding: 30mm;
+    background-color: rgb(202, 219, 252);
+}
+
+@font-face {
+    font-family: "Gimme Danger";
+    src: url("Fontes/Gimme Danger.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "LLCOOPER";
+    src: url("Fontes/LLCOOPER.TTF") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Top Secret";
+    src: url("Fontes/Top Secret.ttf") format("truetype"); 
+    font-display: swap;
+}
+
+.gimme-danger {
+    font-family: "Gimme Danger", serif;
+    background-color: rgb(200, 255, 237);
+}
+
+.ll-cooper {
+    font-family: "LLCOOPER", sans-serif;  
+    background-color: rgb(200, 255, 237);  
+}
+
+.top-secret {
+    font-family: "Top Secret", serif;    
+    background-color: rgb(200, 255, 237);
+}
+
+
+.downloadgd{
+     width: 150px;
+  height: 150px;
+  background-color: #b2dffd;
+  
+}
+
+.downloadllcooper{
+     width: 150px;
+  height: 150px;
+  background-color: #c3e5fc;
+}
+
+.downloadtopsecret{
+     width: 150px;
+  height: 150px;
+  background-color: #c6e8ff;
+}
