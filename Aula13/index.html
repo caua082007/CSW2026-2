@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard com Cards</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+      
+        .layout-container {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 50px 1fr 40px;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            min-height: 100vh;
+        }
+
+        
+        .header {
+            grid-area: header;
+            background-color: #374a5e; 
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .header .logo {
+            font-size: 16px;
+        }
+
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #374a5e;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 15px;
+        }
+
+        .sidebar a:hover {
+            background-color: #2c3e50;
+        }
+
+        
+        .main-content {
+            grid-area: main;
+            background-color: #ffffff;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        
+        .simple-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 50px; 
+        }
+
+        .simple-card {
+            background-color: #f1f3f5;
+            border-radius: 6px;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .card-wide {
+            grid-column: span 2; 
+        }
+
+        
+        .detail-cards-wrapper {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 780px; 
+            margin: 0 auto;
+        }
+
+        .detail-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detail-card h3 {
+            font-size: 22px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .detail-card p {
+            color: #222;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            flex-grow: 1; 
+        }
+
+        .detail-card button {
+            background-color: #3b98d4; 
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        .detail-card button:hover {
+            background-color: #2a81b9;
+        }
+
+      
+        .footer {
+            grid-area: footer;
+            background-color: #374a5e;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        
+        <!-- Cabeçalho (Header) -->
+        <header class="header">
+            <div class="logo">LOGO</div>
+            <nav class="top-nav">
+                <a href="#">Home</a>
+                <a href="#">Perfil</a>
+                <a href="#">Sair</a>
+            </nav>
+        </header>
+
+        
+        <aside class="sidebar">
+            <nav>
+                <a href="#">Dashboard</a>
+                <a href="#">Usuários</a>
+                <a href="#">Relatórios</a>
+                <a href="#">Configurações</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+          
+            <section class="simple-cards-grid">
+                <div class="simple-card">Card 1</div>
+                <div class="simple-card">Card 2</div>
+                <div class="simple-card">Card 3</div>
+                <div class="simple-card">Card 4</div>
+                <div class="simple-card card-wide">Card 5</div>
+                <div class="simple-card card-wide">Card 6</div>
+            </section>
+
+           
+            <section class="detail-cards-wrapper">
+                <div class="detail-card">
+                    <h3>Título 1</h3>
+                    <p>Este é um exemplo de texto para o card. Conteúdo simples para demonstração.</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="detail-card">
+                    <h3>Título 2</h3>
+                    <p>Outro exemplo de conteúdo para mostrar como os cards funcionam.</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="detail-card">
+                    <h3>Título 3</h3>
+                    <p>Mais um card com conteúdo de exemplo para completar o layout.</p>
+                    <button>Saiba mais</button>
+                </div>
+            </section>
+
+        </main>
+
+        
+        <footer class="footer">
+            &copy; 2026 - Sistema Web
+        </footer>
+
+    </div>
+
+</body>
+</html>
